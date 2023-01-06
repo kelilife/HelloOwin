@@ -6,7 +6,7 @@ namespace KeLi.HelloOwin.Controllers
 {
     public class PersonController : BaseController<Person>
     {
-        private readonly List<Person> _persons = new List<Person>
+        private readonly List<Person> persons = new List<Person>
         {
             new Person { Id = 001, Age = 20, Name = "Jack" },
             new Person { Id = 002, Age = 27, Name = "Tom" },
@@ -27,12 +27,12 @@ namespace KeLi.HelloOwin.Controllers
 
         public override Person Get(int id)
         {
-            return _persons.Find(f => f.Id == id);
+            return persons.Find(f => f.Id == id);
         }
 
         public override List<Person> Get()
         {
-            return _persons;
+            return persons;
         }
     }
 }
